@@ -1,0 +1,176 @@
+body{
+    background-color: #adb9e3;
+    color:#111818;
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.intro{
+    text-align: left;
+    font-size: 25px;
+}
+
+.grid-contaner{
+    display:grid;
+    grid-auto-columns: minmax(80%, auto);
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "picture text";
+    align-items: center;
+    align-content: stretch;
+    row-gap: 20px;
+    text-align: center;
+}
+.pictue{
+    align-items:left;
+    justify-self: center;
+    margin-right: 15%;
+}
+
+.copy{
+    float:left;
+    text-align: left;
+}
+p{
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 150%;
+}
+.header{
+width: 95vw;
+}
+
+h1{
+    text-align: center;
+    font-size: 400%;
+}
+
+h2{
+    text-align: center;
+}
+
+.menu-wrap {                             /* .menu-wrap contains all parts of our responsive navigation */
+    height: 3em;                       /* Set default height for navigation */
+    background-color: #31374d;            /* Set background color for entire navigation (useful for horizontal menu)*/
+    padding: 10px 15px;                /* Set padding around navigation */
+    /*position: fixed;*/               /* Uncomment out this line to lock navigation to top of window when scrolling */
+    width: 100%;                       /* Have navigation fill entire horizontal space */
+    align-items: center;
+    text-align: center;
+    font-size: 120%;
+}
+.menu-icon {
+    font-size: 2em;                    /* Set size of hamburger menu icon */
+    color: #3CB0FC;                       /* Set color of hamburger menu icon */
+}
+nav {
+    position: absolute;                /* Absolute positions nav on page */
+    background-color: #31374d;            /* Set background color for nav (useful when nav becomes vertical)*/
+    top: 3.5em;                        /* Add space to top of screen so links are below hamburger icon */
+    left:0;                            /* Navigation links should appear on left side of screen */
+    width: 100%;                       /* Similar to .menu-wrap, nav should fill entire horizontal space */
+}
+nav ul {
+    list-style-type: none;             /* Get rid of bullets on unordered list (navigation links) */
+    max-height: 0em;                   /* Section containing navigation links should be collapsed until hamburger menu icon is toggled */
+    overflow: hidden;                  /* Content of collapsed section should be hidden */
+    transition: max-height 0.5s;       /* Transition between opening and closing of navigation should take 0.5 seconds */
+}
+nav ul li a {
+    display: block;                    /* Links should be displayed as block (each link taking up its required space on a new line) */
+    padding: .75em 2em 1em 0em;             /* Set padding for each navigation link */
+    color: #3CB0FC;                       /* Set color for navigation links */
+    text-decoration: none;             /* Get rid of underlines on navigation links */
+    font-size: 135%;
+}
+nav ul li a:hover, nav ul li a:focus {
+    color: #fff;                       /* Change color of link when hovered over or focused on */
+}
+#checkbox {
+    display: none;                     /* Although the checkbox functionality is needed, we don't want to see the actual checkbox */
+}
+#checkbox:checked ~ nav ul {
+    max-height: 11em;                  /* When the checkbox is checked, expand the height of ul to reveal navigation */
+}
+/* desktop/large screen settings */
+@media (min-width: 768px) {             /* Media Query for larger screens */
+    .menu-icon {
+         display: none;                /* Hide hamburger menu icon on larger screens */
+    }
+    nav {
+         position: relative;
+         top: -1em;                    /* Move navigation links up (as they no longer need to be below hamburger icon) */
+    }
+    nav ul {
+         max-height: 2.75em;           /* Adjust max-height to fit content horizontally rather than vertically */
+         padding: 15px 15px;
+    }
+    nav ul li {
+         display: inline-block;        /* Display list items as an inline-block (on a single line) */
+         padding-left: 1em;            /* Add padding between horizontal links */
+    }
+}
+/* General page styles */
+section {
+    padding-top: 3em;
+}
+
+/*
+ul {                                 
+    text-align: center;           
+    list-style: none;             
+    }
+    ul li {                              
+    font: bold #3CB0FC  22px/38px 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-weight: bolder;
+    Color: #3CB0FC;
+    display: inline-block;            
+    position: relative;              
+    padding: 20px 25px;          
+    background: #31374d;            
+    cursor: pointer;                
+    border-radius: 10%;
+    }
+    ul li:hover {                      
+    background: #a7b9f8;          
+    color: #555e7e;                     
+    }
+    ul li ul {                           
+    padding: 0;                      
+    position: absolute;            
+    top: 48px;                       
+    left: -10000px;              
+    width: 150px;                
+    }
+    ul li ul li {                      
+    background: #31374d;          
+    display: block;                 
+    color: #3CB0FC;                    
+    }
+    ul li ul li:hover { background: #31374d; } 
+    ul li:hover ul {               
+    display: block;               
+    left :0px;                  
+    }
+        */
+    h5{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    a{
+        align-content: center;
+        color: #3CB0FC;
+        text-decoration: none;
+        background-color: #31374d;
+        padding: 6px;
+        border-radius: 5px;
+        font-size: 25px;
+    }
+    a:hover{
+        text-decoration: none;
+        color:#3CB0FC;
+        background-color: #31374d;
+    }
